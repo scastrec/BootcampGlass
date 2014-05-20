@@ -8302,7 +8302,7 @@ false
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
-                <string name="app_name" >HelloGlass
+                <string name="app_name" >Bonjour!
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
@@ -8324,6 +8324,11 @@ false
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="voice_trigger_start"
+                path="/opt/workspaces/android/HelloGlass/app/src/main/res/xml/voice_trigger_start.xml"
+                qualifiers=""
+                type="xml" />
         </source>
         <source path="/opt/workspaces/android/HelloGlass/app/build/res/rs/debug" />
         <source path="/opt/workspaces/android/HelloGlass/app/build/res/generated/debug" />

@@ -546,7 +546,7 @@
     <eat-comment />
 
     <string name="action_settings">Settings</string>
-    <string name="app_name">HelloGlass</string>
+    <string name="app_name">Bonjour!</string>
     <string name="hello_world">Hello world!</string>
     <!-- From: file:/opt/workspaces/android/HelloGlass/app/src/main/res/values/styles.xml -->
     <eat-comment />
