@@ -1,6 +1,7 @@
 package com.stephanecastrec.helloglass.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,19 +65,29 @@ public class MainActivity extends Activity {
 
         card = new Card(this);
         card.setText("This card has a mosaic of puppies.");
-        card.setFootnote("you can go back in your swipe!!");
+        card.setFootnote("and again!");
         card.setImageLayout(Card.ImageLayout.LEFT);
         card.addImage(R.drawable.ic_launcher);
         card.addImage(R.drawable.android_logo_small);
         mCards.add(card);
+
+        card = new Card(this);
+        card.setText("Custom card available next.");
+        card.setFootnote("Tap to see!");
+        mCards.add(card);
     }
+
 
     /**
      * Action to do when you have a card tapped.
      */
     private void tappedCard() {
         int i = mCardScrollView.getSelectedItemPosition();
-        Toast.makeText(this, this.getString(R.string.card_tapped) + i, Toast.LENGTH_SHORT).show();
+        if(mCardScrollView.getSelectedItemPosition() != mCards.size()-1) {
+            Toast.makeText(this, this.getString(R.string.card_tapped) + i, Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(new Intent(this, SecondActivity.class));
+        }
     }
 
 
